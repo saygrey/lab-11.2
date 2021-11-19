@@ -14,12 +14,6 @@ public abstract class Compiler {
     protected abstract void createObjectCode();
     protected abstract void optimizeCode();
 
-    public abstract Lexem[] getLexemTable();
-    public abstract Identifier[] getIdentifierTable();
-    public abstract DSR getDSR();
-    public abstract Triad[] getTriads();
-    public abstract OptimizeResults getOptimizeResults();
-
-    public abstract String getObjCodeBeforeOpt();
+    public abstract String getObjCode();
 }
 

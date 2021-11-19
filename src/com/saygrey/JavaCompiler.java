@@ -29,34 +29,8 @@ public class JavaCompiler extends Compiler {
     @Override
     protected void optimizeCode() { }
 
-
     @Override
-    public Lexem[] getLexemTable() {
-        return null;
-    }
-
-    @Override
-    public Identifier[] getIdentifierTable() {
-        return null;
-    }
-
-    @Override
-    public DSR getDSR() {
-        return null;
-    }
-
-    @Override
-    public Triad[] getTriads() {
-        return null;
-    }
-
-    @Override
-    public OptimizeResults getOptimizeResults() {
-        return null;
-    }
-
-    @Override
-    public String getObjCodeBeforeOpt() {
+    public String getObjCode() {
         return null;
     }
 }
