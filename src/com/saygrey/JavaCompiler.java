@@ -1,10 +1,12 @@
 package com.saygrey;
 
 public class JavaCompiler extends Compiler {
-    public JavaCompiler(JavaSourceCode inSrc){
-        srcCode=inSrc;
+    public JavaCompiler(JavaSourceCode inSrc) {
+        srcCode = inSrc;
     }
-    public JavaCompiler(){}
+
+    public JavaCompiler() {
+    }
 
     @Override
     protected void compile() {
@@ -14,10 +16,12 @@ public class JavaCompiler extends Compiler {
         createObjectCode();
         optimizeCode();
     }
-    public void setSrcCode(SourceCode inSrc){
+
+    public void setSrcCode(SourceCode inSrc) {
         srcCode.setCode(inSrc.getCode());
         System.out.println("setSrcCode");
     }
+
     @Override
     protected void lexicalAnalysis() {
         new LexicalAnalyzator();
@@ -48,7 +52,37 @@ public class JavaCompiler extends Compiler {
 
     @Override
     public ObjectCode getObjCode() {
-        System.out.println("getObjCode()");
-        return objectCode;
+        return null;
+    }
+
+
+    @Override
+    public Lexem[] getLexemTable() {
+        return null;
+    }
+
+    @Override
+    public Identifier[] getIdentifierTable() {
+        return null;
+    }
+
+    @Override
+    public DSR getDSR() {
+        return null;
+    }
+
+    @Override
+    public Triad[] getTriads() {
+        return null;
+    }
+
+    @Override
+    public OptimizeResults getOptimizeResults() {
+        return null;
+    }
+
+    @Override
+    public String getObjCodeBeforeOpt() {
+        return null;
     }
 }
