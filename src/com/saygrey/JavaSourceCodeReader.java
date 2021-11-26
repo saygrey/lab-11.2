@@ -2,12 +2,12 @@ package com.saygrey;
 
 import java.io.File;
 
-public class JavaSourceCodeReader extends SourceCodeReader{
+public class JavaSourceCodeReader implements SourceCodeReader{
     @Override
-    protected JavaSourceCode readFromTextFile(File textFile) {
+    public JavaSourceCode readFromTextFile(File textFile) {
         return null;
     }
-    protected JavaSourceCode readFromConsole(){
+    public JavaSourceCode readFromConsole(){
         System.out.printf("\nВведите исходный код в консоль.\n");
         return null;
     }

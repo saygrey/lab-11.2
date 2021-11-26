@@ -7,8 +7,11 @@ public class CompilerResultsPrinter {
     }
 
     protected void printAllCompileRes(){
-        System.out.printf("\nИспользуется компилятор - %s\nРезультаты компиляции :\n",this.comp.getClass());
+        printCompilerInfo();
         printObjCode();
+    }
+    protected void printCompilerInfo(){
+        System.out.printf("\nИспользуется компилятор - %s\nРезультаты компиляции :\n",this.comp.getClass());
     }
 
     protected void printObjCode(){

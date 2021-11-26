@@ -4,6 +4,7 @@ public class JavaCompiler extends Compiler {
     public JavaCompiler(JavaSourceCode inSrc){
         srcCode=inSrc;
     }
+    public JavaCompiler(){}
 
     @Override
     protected void compile() {
@@ -13,24 +14,41 @@ public class JavaCompiler extends Compiler {
         createObjectCode();
         optimizeCode();
     }
+    public void setSrcCode(SourceCode inSrc){
+        srcCode.setCode(inSrc.getCode());
+        System.out.println("setSrcCode");
+    }
+    @Override
+    protected void lexicalAnalysis() {
+        new LexicalAnalyzator();
+        System.out.println("lexicalAnalysis()");
+    }
 
     @Override
-    protected void lexicalAnalysis() { }
+    protected void syntaxParsing() {
+        new SyntaxParser();
+        System.out.println("syntaxParsing()");
+    }
 
     @Override
-    protected void syntaxParsing() { }
+    protected void semanticParsing() {
+        new SemanticParser();
+        System.out.println("semanticParsing()");
+    }
 
     @Override
-    protected void semanticParsing() { }
+    protected void createObjectCode() {
+        System.out.println("createObjectCode()");
+    }
 
     @Override
-    protected void createObjectCode() { }
+    protected void optimizeCode() {
+        System.out.println("optimizeCode()");
+    }
 
     @Override
-    protected void optimizeCode() { }
-
-    @Override
-    public String getObjCode() {
-        return null;
+    public ObjectCode getObjCode() {
+        System.out.println("getObjCode()");
+        return objectCode;
     }
 }
